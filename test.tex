@@ -131,6 +131,9 @@
 \begin{enumerate}
     \item 放射源:本实验采用的是以$\rm{Pd}$(钯)为衬底的$^{57}\rm{Co}$放射源.为了使源发射的穆斯堡尔谱线是单色的,通常选用非磁性且具有立方晶系结构的金属做衬底.此外,所选金属也应具有较高的德拜温度以提高无反冲系数$f$.此外,选用金属做衬底的另一好处是,由于金属中电子的弛豫时间极短,前级衰变产生的局域电荷态将很快消失不起作用.
     \item 电磁驱动器:本实验采用的是背靠背双扬声器结构,其中分别含有一个驱动线圈和一个拾波线圈.驱动线圈用以达成周期性调制穆斯堡尔源所放出的$\gamma$射线的能量,拾波线圈则用来监测驱动线圈产生的信号.
+    \item 驱动电源:来自多道分析器的同步方波经积分电路后变成三角波输入比较器.比较器将它与拾波线圈两端的信号相比较,其差值经放大器放大后再加于驱动线圈.实验中通常用示波器观察差误信号的大小,以监视驱动杆的运动是否正常.
+    \item $\gamma$射线探测器:本实验使用的探测器是$\rm{NaI(Tl)}$闪烁体探测器.
+    \item 微机多道分析器:在通用微机内插上线性放大卡、模数转换卡和多道分析卡就构成一台微机多道分析器.有脉冲幅度分析(PHA)和多度定标(MCS)两种功能.为了去除除$\si{14.4 keV}$的$\gamma$射线的影响,需要调节上下阈电位器.
 
 \end{enumerate}
 \section{结果与分析}
@@ -139,28 +142,6 @@
 依自己意愿，实验结果和对结果的分析讨论既可分为两节也可合在一节.\par
 \subsection{根据需要可分节}
 
-表是被一系列横线隔开的有序排列的数据，报告格式要求最上和最下两条横线为双横线. 下页是表格和图片的例子.\par
-
-\begin{table}[t]
-\caption{\label{tab:table1}%
-这个表格讲述了如何标题，标题呢，一般会很长很长很长很长很长很长很长很长的. 这个～}
-\begin{ruledtabular}
-\begin{tabular}{ll}
-Manucript\footnote{Note a.} & Journals\footnote{Note b.} \\
-\colrule
-{\bf\uppercase\expandafter{\romannumeral 1}.} principle heading & {\bf\uppercase\expandafter{\romannumeral 1}. principle heading} \\
-A. first heading & {\bf A. first heading} \\
-\end{tabular}
-\end{ruledtabular}
-\end{table}
-
-表~\ref{tab:table1} 给出的是~AIP（美国物理联合会）期刊子标题的格式，我们的对课程报告也作同样的要求.\par
-从表~\ref{tab:table1} 可以看出，对表中各项的注释应作为表的一部分放在表后，而不是页脚或文尾.\par
-每个图一般包含：图名、轴名、轴、刻度、标尺、数据点、曲线、图例、标注和图注等部分. 应尽量让读者不看正文就能基本理解图的含意.\par
-最常用的作图软件是Origin.学习使用基本的数据处理和作图工具软件也是课程的基本内容. 课程鼓励大家使用Python语言编程作图.\par
-逐点测量得到的函数关系要同时用表格和图给出. 需要作比较的多条曲线要画在同一图上.\par
-为避免读者在图表和正文间反复跳跃阅读，在正文中也要对图表作必要的说明.\par
-公式嘛～TeX专长～
 \begin{equation}
 N(x_0,y_0,z_0)=\prod_{j\in\{x\}}g(j_0,\sigma^j_0) \label{eq:1}
 \end{equation}
