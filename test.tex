@@ -67,6 +67,7 @@
 \usepackage{geometry}
 \usepackage[mathscr]{eucal}
 \usepackage{siunitx}
+\usepackage{booktabs}
 
 %\usepackage{background} %Waterstamp package
 %\SetBgContents{...的实验报告} %Waterstamp to prevent copying
@@ -118,7 +119,7 @@
 由于穆斯堡尔谱线很窄,常常被用来测量核能级的高精细结构、确定核磁矩的大小、核激发态的寿命等,还可以被用来测量光子的引力红移.
 \par
 穆斯堡尔谱线的分辨本领很高,同时又具有抗干扰能力强、实验设备和技术相对简单、对样品无破坏性等优良特性.目前已经成为化学、磁学、固体物理、生物学、冶金学等领域的重要研究手段之一.
-\section{实验装置}
+\section{实验装置与内容}
 \subsection{实验装置设置}
 实验装置如图\ref{fig:1}所示:
 \begin{figure}[htbp]
@@ -136,27 +137,59 @@
     \item 微机多道分析器:在通用微机内插上线性放大卡、模数转换卡和多道分析卡就构成一台微机多道分析器.有脉冲幅度分析(PHA)和多度定标(MCS)两种功能.为了去除除$\si{14.4 keV}$的$\gamma$射线的影响,需要调节上下阈电位器.
 
 \end{enumerate}
+\subsection{实验操作内容安排}
+\subsubsection{上下阈值的确定}
+在不放置吸收体时,利用多道分析器的幅度分析工作方式测量实验所用的$^{57}\rm{Co}$放射源的$\gamma$能谱,并辨认出$\si{\num{14.4}keV}$的峰.然后合理设定上下阈值以滤除其他谱线.
+\subsubsection{采集穆斯堡尔谱}
+取多道分析器道数为512道,道时间间隔由电磁驱动器的固有周期(约0.1s)计算.正确设定多道分析器的参量后,开始采谱,并用示波器监视三角波信号或差误信号,必要时可调节驱动电源.分别测量$\alpha-\rm{Fe}$和硝普酸钠做吸收体时的穆斯堡尔谱.
 \section{结果与分析}
-此部分是实验报告的主体，应占报告篇幅的一半以上.\par
-实验结果应尽量以图表的形式给出. 每一个图表都应该是完整的，即阅读图表时可以不必依赖正文.\par
-依自己意愿，实验结果和对结果的分析讨论既可分为两节也可合在一节.\par
-\subsection{根据需要可分节}
-
-\begin{equation}
-N(x_0,y_0,z_0)=\prod_{j\in\{x\}}g(j_0,\sigma^j_0) \label{eq:1}
-\end{equation}
-对于预料之外的实验结果，必须首先小心证明其可靠性.读者只有在相信你的实验结果时才愿意花时间看你的分析.\par
-必须用文字归纳整理出正式的实验结果或结论.可信的实验结果是课程报告最重要的内容.作为一个实验物理工作者，分析解释出错并不丢脸，实验结果不被采信则是致命的.\par
-教学实验的结论往往是预先知道的. 所以，教师更关心的是你的说理过程. 一般说来，单由课内实验的结果不足以能得到明确的结论. 此时，你可以引用他人的研究结果来帮助帮助自己的论证，但必须注明出处. \par
-确实不能得到明确结论时，可以给出几种可能结论并指出可以再做哪些实验来帮助作进一步的判断.\par
-总之，分析讨论部分要做到: 论据要valid，论证要reasonable，结论要convincing.\par
-
+实验采集的穆斯堡尔谱图分别如下:\par
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Exp_1/Fe.png}
+    \caption{$\alpha-\rm{Fe}$的穆斯堡尔谱图}
+    \label{fig:2}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Exp_1/NaX.png}
+    \caption{$\rm{NaX}$的穆斯堡尔谱图}
+    \label{fig:3}
+\end{figure}
+记录穆斯堡尔谱各峰位道址如下:\par
+\begin{table}[htbp]
+    \begin{ruledtabular}
+    \centering
+        \begin{tabular}{lrrrrrr}
+            \toprule
+            {$v_i$} &   1 &    2 &    3 &    4 &    5 ,&    6 \\
+            \midrule
+            道址 &  37 &  77 &  113 &  145 &  185 &  225 \\
+            \bottomrule
+        \end{tabular}
+    \end{ruledtabular}
+    \caption{$\alpha-\rm{Fe}$的穆斯堡尔谱峰位}
+\end{table}
+\begin{table}[htbp]
+    \begin{ruledtabular}
+    \centering
+        \begin{tabular}{lrrrr}
+            \toprule
+            {$v_i$} &    1 &    2 &    3 &    4 \\
+            \midrule
+            道址 &  120 &  150 &  360 &  390 \\
+            \bottomrule
+        \end{tabular}
+    \end{ruledtabular}
+    \caption{$\rm{NaX}$的穆斯堡尔谱峰位}
+\end{table}
+下根据穆斯堡尔谱图及数据进行分析:
+\subsection{计算道增益$K$}
 \section{结论}
 首先要给出实验结果，然后再给出由实验结果分析得到的结果和结论．此部分给出的内容要比摘要中的全面，用词要更准确．\par
 
 \section{致谢}
-硕、博士论文致谢词产生器 \href{http://acknowledgement.sinaapp.com/}{http://acknowledgement.sinaapp.com/}\\
-此部分感谢同组人...和对实验和报告有帮助的人．
+感谢王思广老师的悉心指导,也感谢和我一起参加实验的郜瑞啸同学,以及在同一实验室进行实验的赵萌同学.
 %\bibliography{apssamp}
 \begin{thebibliography}{}
 \bibitem{Book} 吴思诚，荀坤 2015 近代物理实验（第四版）（北京：高等教育出版社）第80-91页.
