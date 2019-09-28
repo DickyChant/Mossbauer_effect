@@ -164,7 +164,8 @@
             \toprule
             {$v_i$} &   1 &    2 &    3 &    4 &    5 ,&    6 \\
             \midrule
-            道址 &  37 &  77 &  113 &  145 &  185 &  225 \\
+            道址1 &  37 &  77 &  113 &  145 &  185 &  225 \\
+            道址2 &  288 &  325 &  367 &  395 &  435 &  475 \\
             \bottomrule
         \end{tabular}
     \end{ruledtabular}
@@ -185,6 +186,16 @@
 \end{table}
 下根据穆斯堡尔谱图及数据进行分析:
 \subsection{计算道增益$K$}
+根据公式
+$$K=\frac{10.656}{v_6-v_1}\si{mm\per s}$$
+考虑由于存在批裂,采用如下式计算:
+$$K=\frac{10.656*2}{v^1_6-v^1_1+v^2_6-v^2_1}\si{mm\per s}$$
+得到道增益$K=0.056832\si{mm\per s}$.
+\subsection{零速度对应道址}
+首先分别确定两组谱线对应的重心位置,根据重心公式:
+$$v_{c,\alpha-\rm{Fe}}=\frac{v_1+v_2+v_5+v_6}{4}$$
+结合求出的道增益$K$,可得重心位置为
+$$v^1_{c,\alpha-\rm{Fe}}=7.4450\si{mm\per s};v^2_{c,\alpha-\rm{Fe}}=21.639\si{mm\per s}$$
 \section{结论}
 首先要给出实验结果，然后再给出由实验结果分析得到的结果和结论．此部分给出的内容要比摘要中的全面，用词要更准确．\par
 
@@ -199,5 +210,27 @@
 \clearpage
 \appendix
 \section{思考题}
-
+\subsection{问题一}
+在发射(吸收)$\gamma$射线后,核的质量会有一定的下降(上升),带来的后果是,穆斯堡尔谱线会有一定的位移,但是由于多普勒效应的调节能量,加上$\gamma$射线引起的质量偏差很小,所以仍然可以看到穆斯堡尔谱.
+\subsection{问题二}
+当核赛曼分裂显著大于电四极裂距时,$^{57}\rm{Fe}$的能谱图应该接近于赛曼效应能谱图,而穆斯堡尔谱图也也接近,如下:
+\begin{figure}[htbp]
+    \centering
+    \subfloat{\includegraphics[width=0.3\textwidth]{zeeman.png}}....
+    \subfloat{\includegraphics[width=0.3\textwidth]{zeeman_spe.png}}
+    \caption{核赛曼分裂显著大于电四极裂距,左图为能谱,右图为穆斯堡尔谱}
+    \label{fig:4}
+\end{figure}
+当核赛曼分裂显著小于电四极裂距时,$^{57}\rm{Fe}$的能谱图应该接近于电四极裂距能谱图,而穆斯堡尔谱图也也接近,如下:
+\begin{figure}[htbp]
+    \centering
+    \subfloat{\includegraphics[width=0.3\textwidth]{quad.png}}....
+    \subfloat{\includegraphics[width=0.3\textwidth]{quad_spe.png}}
+    \caption{核赛曼分裂显著小于电四极裂距,左图为能谱,右图为穆斯堡尔谱}
+    \label{fig:5}
+\end{figure}
+\subsection{问题三}
+在源和吸收体较厚时,$\gamma$射线被吸收的可能性增大,使得吸收谱相应变宽.
+\subsection{问题四}
+考虑到$v_3$和$v_4$相隔较近,而峰值较小,误差较大,故不采用.
 \end{document}
